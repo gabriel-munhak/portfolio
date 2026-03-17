@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --primaryColor: #FBFBFB;
+  --secondaryColor: #445264;
+  --terdiaryColor: #F3F3F3;
+  --primaryTextColor: #666B72;
+  --secondaryTextColor: #FFFFFF;
+  --inProgressPrimaryColor: #EDEDED;
+  --inProgressSecondaryColor: #DDDDDD;
+}
+
+body {
+  background: var(--primaryColor);
+  color: var(--primaryTextColor);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  max-width: 1102px;
+  margin: 0 auto;
+}
