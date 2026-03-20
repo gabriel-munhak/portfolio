@@ -5,7 +5,7 @@ const Hero = () => {
         <div className="container !h-[auto] flex justify-between">
             <div className="flex flex-col justify-end">
                 <div className="w-[32rem] mb-[90px]">
-                    <h1 className="text-[46px] text-[var(--secondaryColor)] font-medium w-[495px]">Técnico em ADS e <span className="font-black">Engenheiro Front-end</span></h1>
+                    <h1 className="text-[46px] text-[var(--secondaryColor)] font-medium w-[495px] leading-[56px]">Técnico em ADS e <span className="font-black">Engenheiro Front-end</span></h1>
                     <p className="w-full mt-[40px] mb-[40px]">
                         Conheça mais sobre mim ao explorar meu portfólio. Aqui você 
                         encontra um resumo pessoal, minhas experiências acadêmicas 
@@ -25,8 +25,8 @@ const Hero = () => {
                 <div className="rounded-[16px] bg-[var(--secondaryColor)]"></div>
                 <div className="rounded-[16px] bg-[var(--secondaryColor)]"></div>
                 <div className="rounded-[16px] bg-[var(--terdiaryColor)] pt-[32px] pl-[27px]">
-                    <span className="text-[40px] font-bold">+5</span>
-                    <p className="text-[24px] font-semi-bold w-[176px] leading-[28px]">Atividades <span className="font-black">Realizadas</span></p>
+                    <span className="text-[40px] font-bold">+2</span>
+                    <p className="text-[24px] font-semi-bold w-[176px] leading-[28px]">Anos de <span className="font-black">Experiência</span></p>
                 </div>
             </div>
         </div>
