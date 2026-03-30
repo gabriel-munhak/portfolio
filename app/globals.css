@@ -8,6 +8,7 @@
   --secondaryTextColor: #FFFFFF;
   --inProgressPrimaryColor: #EDEDED;
   --inProgressSecondaryColor: #DDDDDD;
+  --btnBgPrimaryColor: #E6E6E6;
 }
 
 body {
@@ -20,4 +21,10 @@ body {
   height: 100vh;
   max-width: 1102px;
   margin: 0 auto;
+}
+
+.active {
+  background-color: var(--secondaryColor);
+  color: var(--secondaryTextColor);
+  font-weight: bolder;
 }
