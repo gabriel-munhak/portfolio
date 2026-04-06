@@ -1,5 +1,5 @@
 import Image from "next/image"
-import placeholder from "@/app/assets/placeholder.png"
+import placeholder from "@/public/assets/placeholder.png"
 
 const ProjectCard = ({name, projectLink, projectRepo}: ProjectCard) => {
     return (

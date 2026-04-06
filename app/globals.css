@@ -28,3 +28,7 @@ body {
   color: var(--secondaryTextColor);
   font-weight: bolder;
 }
+
+button, a {
+  cursor: pointer
+}

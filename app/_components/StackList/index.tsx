@@ -1,5 +1,5 @@
 import Image from "next/image"
-import generic from "@/app/assets/generic.svg"
+import generic from "@/public/assets/generic.svg"
 
 const StackList = ({first, title, tags, last}: StackList) => {
     return (
