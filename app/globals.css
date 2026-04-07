@@ -9,6 +9,8 @@
   --inProgressPrimaryColor: #EDEDED;
   --inProgressSecondaryColor: #DDDDDD;
   --btnBgPrimaryColor: #E6E6E6;
+  --gradientPrimaryColor: linear-gradient(104.04deg, #445264 0%, #344255 50%, #445264 100%);
+  --overlayColor: rgba(0, 0, 0, 0.4);
 }
 
 body {

@@ -9,6 +9,7 @@ type ProjectCard = {
     name: string,
     projectLink: string,
     projectRepo: string
+    newProject: boolean
 }
 
 type Repo = {
@@ -16,4 +17,5 @@ type Repo = {
     name: string;
     html_url: string;
     homepage: string;
+    newProject: boolean
 }

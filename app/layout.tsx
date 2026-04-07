@@ -8,7 +8,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Portifólio - Gabriel Munhak",
+  title: "Portfólio - Gabriel Munhak",
   icons: {
     icon: "/favicon.png"
   }
