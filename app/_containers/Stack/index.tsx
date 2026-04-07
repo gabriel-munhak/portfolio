@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { containerAnimation, itemAnimation } from "@/app/_consts/motion";
 import StackList from "@/app/_components/StackList"
 import * as C from "@/app/_consts/tags"
+import Link from "next/link";
 
 const Stack = () => {
     return (
@@ -26,9 +27,9 @@ const Stack = () => {
                         <StackList title="Back-end" tags={C.backTags}/>
                         <StackList title="Outros" tags={C.othersTags} last={true}/>
                     </div>
-                    <button className="w-[112px] h-[32px] rounded-[12px] bg-[var(--terdiaryColor)] font-bold text-[var(--secondaryColor)] mt-[56px]" type="button">
+                    <Link href={"/stack"} className="w-[112px] rounded-[12px] px-[21px] py-[6px] bg-[var(--terdiaryColor)] font-bold text-[var(--secondaryColor)] mt-[56px]" type="button">
                         Ver mais
-                    </button>
+                    </Link>
                 </div>
             </motion.div>
         </motion.section>

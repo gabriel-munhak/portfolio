@@ -1,5 +1,6 @@
 export const frontTags = [
     "React",
+    "Axios",
     "Vue",
     "Better Auth",
     "Bootstrap",

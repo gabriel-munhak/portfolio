@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { containerAnimation, itemAnimation } from "@/app/_consts/motion";
 import ProjectCard from "@/app/_components/ProjectCard"
 import { newProjects, reposObject } from "@/app/_consts/content"
+import Link from "next/link";
 
 type Filter = "All" | "Projects" | "Activities"
 
@@ -64,7 +65,7 @@ const Projects = () => {
                                 <button onClick={() => setFilter("Activities")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] ${filter === "Activities"? "active" : ""}`}>Atividades</button>
                             </div>
 
-                            <a href="#" className="font-black">Ver mais</a>
+                            <Link href="/projects" className="font-black">Ver mais</Link>
                         </div>
                     </motion.div>
 

@@ -1,10 +1,10 @@
 const About = () => {
     return (
-        <div>
+        <div className="w-[487px]">
             <h2 className="text-[30px] font-black mb-[32px]">
                 Sobre mim
             </h2>
-            <p className="w-[487px] mb-[32px]">
+            <p className="mb-[32px]">
                 Meu nome é Gabriel, tenho 21 anos em 2018 eu descobri o 
                 mundo do TI e a programação, sempre quis seguir uma carreira 
                 de TI e sempre gostei de estudar, então construir uma carreira 
@@ -21,8 +21,8 @@ const About = () => {
                 de emprego para crescer ainda mais profissionalmente em
                 minha carreira.
             </p>
-            <div className="flex w-[304px] text-[var(--secondaryColor)] text-[24px] font-black">
-                <div className="mr-[44px]">
+            <div className="flex justify-between text-[var(--secondaryColor)] text-[24px] font-black">
+                <div>
                     <span className="text-[40px]">13</span>
                     <p className="leading-[29px]">
                         Projetos 
@@ -34,6 +34,13 @@ const About = () => {
                     <p className="leading-[29px]">
                         Atividades
                         Realizadas
+                    </p>
+                </div>
+                <div>
+                    <span className="text-[40px]">+2</span>
+                    <p className="leading-[29px]">
+                        Anos de
+                        Experiência
                     </p>
                 </div>
             </div>
