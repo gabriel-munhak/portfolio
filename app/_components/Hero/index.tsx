@@ -11,9 +11,9 @@ const Hero = () => {
                         encontra um resumo pessoal, minhas experiências acadêmicas 
                         e profissionais, além dos projetos e atividades mais recentes.
                     </p>
-                    <button className="w-[185px] h-[65px] rounded-[20px] bg-[var(--secondaryColor)] text-[var(--secondaryTextColor)] text-[22px] font-black">
+                    <a href="#about-me" className="inline-flex items-center justify-center w-[185px] h-[65px]  rounded-[20px] bg-[var(--secondaryColor)] text-[var(--secondaryTextColor)] text-[22px] font-black">
                         Sobre mim
-                    </button>
+                    </a>
                 </div>
                 <ContactIconsList />
             </div>

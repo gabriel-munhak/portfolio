@@ -1,8 +1,10 @@
 "use client"
 
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion";
+import { containerAnimation, itemAnimation } from "@/app/_consts/motion";
 import ProjectCard from "@/app/_components/ProjectCard"
 import { newProjects, reposObject } from "@/app/_consts/content"
-import { useEffect, useState } from "react"
 
 type Filter = "All" | "Projects" | "Activities"
 
@@ -41,27 +43,41 @@ const Projects = () => {
         .slice(0, 6)
 
     return (
-        <section>
-            <div className="container pt-[54px] pb-[54px] text-[var(--secondaryColor)]">
-                <h2 className="text-[30px] font-bold mb-[16px]">Projetos e atividades</h2>
+        <motion.section id="project-list" className="snap-start"
+            variants={containerAnimation}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.4 }}
+        >
+            <div className="container text-[var(--secondaryColor)] flex flex-col items-center justify-center">
+                <div className="w-full">
 
-                <div className="flex justify-between mb-[22px]">
-                    <div className="flex font-semibold">
-                        <button onClick={() => setFilter("All")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] mr-[16px] ${filter === "All"? "active" : ""}`}>Todos</button>
-                        <button onClick={() => setFilter("Projects")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] mr-[16px] ${filter === "Projects"? "active" : ""}`}>Projetos</button>
-                        <button onClick={() => setFilter("Activities")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] ${filter === "Activities"? "active" : ""}`}>Atividades</button>
+                    <motion.div variants={itemAnimation}>
+                        <h2 className="text-[30px] font-bold mb-[16px]">Projetos e atividades</h2>
+                    </motion.div>
+
+                    <motion.div variants={itemAnimation}>
+                        <div className="flex justify-between mb-[22px]">
+                            <div className="flex font-semibold">
+                                <button onClick={() => setFilter("All")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] mr-[16px] ${filter === "All"? "active" : ""}`}>Todos</button>
+                                <button onClick={() => setFilter("Projects")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] mr-[16px] ${filter === "Projects"? "active" : ""}`}>Projetos</button>
+                                <button onClick={() => setFilter("Activities")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] ${filter === "Activities"? "active" : ""}`}>Atividades</button>
+                            </div>
+
+                            <a href="#" className="font-black">Ver mais</a>
+                        </div>
+                    </motion.div>
+
+                    <div className="grid grid-cols-3 gap-[22px]">
+                        {filteredRepos.map((r, index) => (
+                        <motion.div variants={itemAnimation} key={index} >
+                            <ProjectCard name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url}  />
+                        </motion.div>
+                    ))}
                     </div>
-
-                    <a href="#" className="font-black">Ver mais</a>
-                </div>
-
-                <div className="grid grid-cols-3 gap-[22px]">
-                    {filteredRepos.map((r, index) => (
-                    <ProjectCard key={index} name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url}  />
-                ))}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

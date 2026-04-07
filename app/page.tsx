@@ -6,12 +6,12 @@ import Stack from "./_containers/Stack";
 
 export default function App() {
   return (
-    <>
+    <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
       <Home />
       <AboutMe />
       <Stack />
       <ProjectsList />
       <ContactMe />
-    </>
+    </main>
   )
 }

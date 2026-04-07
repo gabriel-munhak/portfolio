@@ -1,13 +1,29 @@
+"use client"
+
+import { motion } from "framer-motion";
+import { containerAnimation, itemAnimation } from "@/app/_consts/motion";
 import About from "@/app/_components/About"
 import Timeline from "@/app/_components/Timeline"
 
 const AboutMe = () => {
     return (
-        <section className="container flex items-center justify-between">
-            <Timeline />
-            <About />
-        </section>
-    )
-}
+        <motion.section
+            id="about-me"
+            className="container flex items-center justify-between snap-start"
+            variants={containerAnimation}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.4 }}
+        >
+            <motion.div variants={itemAnimation}>
+                <Timeline />
+            </motion.div>
+
+            <motion.div variants={itemAnimation}>
+                <About />
+            </motion.div>
+        </motion.section>
+    );
+};
 
 export default AboutMe
