@@ -1,31 +1,31 @@
 export const Timeline = () => {
     return (
-        <div className="h-[512px] flex flex-col items-center justify-center text-[24px] text-[var(--secondaryColor)] font-black">
-            <div className="w-[8px] h-[64px] bg-[var(--secondaryColor)] pb-[16px] mb-[16px]"/>
+        <div className="lg:h-[32rem] md:h-[23.5rem] flex flex-col items-center justify-center lg:text-[1.5rem] md:text-[1rem] text-[var(--secondaryColor)] font-black">
+            <div className="lg:w-[0.5rem] md:w-[0.375rem] lg:h-[4rem] md:h-[2rem] bg-[var(--secondaryColor)] pb-[1rem] lg:mb-[1rem] md:mb-[0.75rem]"/>
 
-            <div className="w-[16px] h-[16px] rounded-[8px] bg-[var(--secondaryColor)] mb-[16px]">
-                <span className="ml-[24px] relative w-[444px] block mt-[-10px]">Tecnico em ADS</span>
+            <div className="lg:w-[1rem] md:w-[0.75rem] lg:h-[1rem] md:h-[0.75rem] rounded-[50%] bg-[var(--secondaryColor)] lg:mb-[1rem] md:mb-[0.75rem]">
+                <span className="lg:ml-[1.5rem] md:ml-[1.1875rem] lg:w-[27.75rem] md:w-[18rem] block lg:mt-[-0.625rem] md:mt-[-0.46875rem]">Tecnico em ADS</span>
             </div>
 
-            <div className="w-[8px] h-[64px] bg-[var(--secondaryColor)] mb-[16px]"/>
+            <div className="lg:w-[0.5rem] md:w-[0.375rem] lg:h-[4rem] md:h-[2rem] bg-[var(--secondaryColor)] lg:mb-[1rem] md:mb-[0.75rem]"/>
 
-            <div className="w-[16px] h-[16px] rounded-[8px] bg-[var(--secondaryColor)] mb-[16px]">
-                <span className="ml-[24px] relative w-[444px] block mt-[-10px]">Tecnico em Engenharia Front-end</span>
+            <div className="lg:w-[1rem] md:w-[0.75rem] lg:h-[1rem] md:h-[0.75rem] rounded-[50%] bg-[var(--secondaryColor)] lg:mb-[1rem] md:mb-[0.75rem]">
+                <span className="lg:ml-[1.5rem] md:ml-[1.1875rem] lg:w-[27.75rem] md:w-[18rem] block lg:mt-[-0.625rem] md:mt-[-0.46875rem]">Tecnico em Engenharia Front-end</span>
             </div>
 
-            <div className="w-[8px] h-[64px] bg-[var(--secondaryColor)] mb-[16px]"/>
+            <div className="lg:w-[0.5rem] md:w-[0.375rem] lg:h-[4rem] md:h-[2rem] bg-[var(--secondaryColor)] lg:mb-[1rem] md:mb-[0.75rem]"/>
 
-            <div className="w-[16px] h-[16px] rounded-[8px] bg-[var(--secondaryColor)] mb-[16px]">
-                <span className="ml-[24px] relative w-[444px] block mt-[-10px]">Desenvolvedor Front-end Voluntário</span>
+            <div className="lg:w-[1rem] md:w-[0.75rem] lg:h-[1rem] md:h-[0.75rem] rounded-[50%] bg-[var(--secondaryColor)] lg:mb-[1rem] md:mb-[0.75rem]">
+                <span className="lg:ml-[1.5rem] md:ml-[1.1875rem] lg:w-[27.75rem] md:w-[18rem] block lg:mt-[-0.625rem] md:mt-[-0.46875rem]">Desenvolvedor Front-end Voluntário</span>
             </div>
 
-            <div className="w-[8px] h-[64px] bg-[var(--secondaryColor)] mb-[16px]"/>
+            <div className="lg:w-[0.5rem] md:w-[0.375rem] lg:h-[4rem] md:h-[2rem] bg-[var(--secondaryColor)] lg:mb-[1rem] md:mb-[0.75rem]"/>
 
-            <div className="w-[16px] h-[16px] rounded-[8px] bg-[var(--inProgressPrimaryColor)] mb-[16px]">
-                <span className="ml-[24px] relative w-[444px] block mt-[-10px] text-[var(--inProgressSecondaryColor)]">Faculdade de Engenharia de Software</span>
+            <div className="lg:w-[1rem] md:w-[0.75rem] lg:h-[1rem] md:h-[0.75rem] rounded-[50%] bg-[var(--inProgressPrimaryColor)] lg:mb-[1rem] md:mb-[0.75rem]">
+                <span className="lg:ml-[1.5rem] md:ml-[1.1875rem] lg:w-[27.75rem] md:w-[18rem] block lg:mt-[-0.625rem] md:mt-[-0.46875rem] text-[var(--inProgressSecondaryColor)]">Faculdade de Engenharia de Software</span>
             </div>
 
-            <div className="w-[8px] h-[64px] bg-[var(--inProgressPrimaryColor)] mb-[16px]"/>
+            <div className="lg:w-[0.5rem] md:w-[0.375rem] lg:h-[4rem] md:h-[2rem] bg-[var(--inProgressPrimaryColor)] lg:mb-[1rem] md:mb-[0.75rem]"/>
         </div>
     )
 }
