@@ -37,19 +37,19 @@ const Nav = () => {
                     <div className="absolute w-[100vw] h-[100vh] top-[2.5rem] left-[0] bg-[var(--primaryColor)]">
                         <ul className="flex flex-col justify-between gap-[1rem] text-[1rem] lg:hidden ">
                             <li>
-                                <a href="#home">Home</a>
+                                <a onClick={handleClick} href="#home">Home</a>
                             </li>
                             <li>
-                                <a href="#about-me">Sobre mim</a>
+                                <a onClick={handleClick} href="#about-me">Sobre mim</a>
                             </li>
                             <li>
-                                <a href="#stack">Tecnologia</a>
+                                <a onClick={handleClick} href="#stack">Tecnologia</a>
                             </li>
                             <li>
-                                <a href="#project-list">Atividades e Projetos</a>
+                                <a onClick={handleClick} href="#project-list">Atividades e Projetos</a>
                             </li>
                             <li>
-                                <a href="#contact">Contato</a>
+                                <a onClick={handleClick} href="#contact">Contato</a>
                             </li>
                         </ul>
                     </div>

@@ -12,11 +12,26 @@ type Filter = "All" | "Projects" | "Activities"
 const Projects = () => {
     const [repos, setRepos] = useState<Repo[]>([])
     const [filter, setFilter] = useState<Filter>("All")
+    const [isMobile, setIsMobile] = useState<boolean>(false)
 
     useEffect(() => {
         fetch("https://api.github.com/users/gabriel-munhak/repos?per_page=100")
         .then((res) => res.json())
         .then((data) => setRepos(data))
+    }, [])
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth
+            console.log("width:", width) 
+
+            setIsMobile(width < 1024)
+        }
+
+        handleResize()
+        window.addEventListener("resize", handleResize)
+
+        return () => window.removeEventListener("resize", handleResize)
     }, [])
 
     const filteredRepos = repos
@@ -41,7 +56,11 @@ const Projects = () => {
             if(!aIsNew && bIsNew) return 1
             return 0
         })
-        .slice(0, 6)
+
+    const mobileProjects = filteredRepos.slice(0, 3)
+    const desktopProjects = filteredRepos.slice(0, 6)
+
+    const resolvedProjects = isMobile ? mobileProjects : desktopProjects
 
     return (
         <motion.section id="project-list" className="snap-start"
@@ -54,23 +73,23 @@ const Projects = () => {
                 <div className="w-full">
 
                     <motion.div variants={itemAnimation}>
-                        <h2 className="text-[30px] font-bold mb-[16px]">Projetos e atividades</h2>
+                        <h2 className="lg:text-[1.875rem] md:text-[1.25rem] font-bold mb-[1rem]">Projetos e atividades</h2>
                     </motion.div>
 
                     <motion.div variants={itemAnimation}>
-                        <div className="flex justify-between mb-[22px]">
+                        <div className="flex justify-between mb-[1.375rem]">
                             <div className="flex font-semibold">
-                                <button onClick={() => setFilter("All")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] mr-[16px] ${filter === "All"? "active" : ""}`}>Todos</button>
-                                <button onClick={() => setFilter("Projects")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] mr-[16px] ${filter === "Projects"? "active" : ""}`}>Projetos</button>
-                                <button onClick={() => setFilter("Activities")} type="button" className={`py-[8px] px-[16px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] ${filter === "Activities"? "active" : ""}`}>Atividades</button>
+                                <button onClick={() => setFilter("All")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] md:py-[0.375rem] md:px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] md:rounded-[0.625rem] mr-[1rem] lg:text-[1rem] md:text-[0.875rem] ${filter === "All"? "active" : ""}`}>Todos</button>
+                                <button onClick={() => setFilter("Projects")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] md:py-[0.375rem] md:px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] md:rounded-[0.625rem] mr-[1rem] lg:text-[1rem] md:text-[0.875rem] ${filter === "Projects"? "active" : ""}`}>Projetos</button>
+                                <button onClick={() => setFilter("Activities")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] md:py-[0.375rem] md:px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] md:rounded-[0.625rem] lg:text-[1rem] md:text-[0.875rem] ${filter === "Activities"? "active" : ""}`}>Atividades</button>
                             </div>
 
-                            <Link href="/projects" className="font-black">Ver mais</Link>
+                            <Link href="/projects" className="font-black lg:text-[1rem] md:text-[0.875rem] self-center">Ver mais</Link>
                         </div>
                     </motion.div>
 
-                    <div className="grid grid-cols-3 gap-[22px]">
-                        {filteredRepos.map((r, index) => (
+                    <div className="grid grid-cols-3 grid-rows-1 lg:gap-[1.375rem] md:gap-[1rem]">
+                        {resolvedProjects.map((r, index) => (
                         <motion.div variants={itemAnimation} key={index} >
                             <ProjectCard name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url}  />
                         </motion.div>
