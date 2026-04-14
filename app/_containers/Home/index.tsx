@@ -7,7 +7,7 @@ import Nav from "@/app/_components/Nav"
 
 export const Home = () => {
     return(
-        <motion.section id="home" className="snap-start pt-[2.5rem]"
+        <motion.section id="home" className="snap-start md:pt-[2rem] lg:pt-[2.5rem]"
             variants={containerAnimation}
             initial="hidden"
             whileInView="show"

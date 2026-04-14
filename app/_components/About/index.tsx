@@ -20,6 +20,9 @@ const About = () => {
                 ingressei na faculdade e quero ir além. Busco uma oportunidade
                 de emprego para crescer ainda mais profissionalmente em
                 minha carreira.
+                <br />
+                <br />
+                Ao todo possuo mais de 2 anos de experiencia entre projetos praticos e volutarios.
             </p>
             <div className="flex justify-between text-[var(--secondaryColor)] text-[24px] font-black">
                 <div>
