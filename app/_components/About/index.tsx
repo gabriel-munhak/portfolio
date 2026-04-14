@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <div className="lg:w-[30.4375rem] md:w-[20.375rem]">
-            <h2 className="lg:text-[1.875rem] md:text-[1.25rem] font-black lg:mb-[2rem] md:mb-[1rem]">
+            <h2 className="lg:text-[1.875rem] md:text-[1.25rem] font-black lg:mb-[2rem] md:mb-[1rem] text-[var(--secondaryColor)]">
                 Sobre mim
             </h2>
             <p className="lg:mb-[2rem] md:mb-[1rem] lg:text-[1rem] md:text-[0.75rem] lg:h-[auto] md:h-[12.1875rem] lg:overflow-y-auto md:overflow-y-scroll custom-scrollbar">

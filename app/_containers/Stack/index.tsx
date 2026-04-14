@@ -16,10 +16,10 @@ const Stack = () => {
         >
             <motion.div variants={itemAnimation}>
                 <div className="container flex flex-col items-center justify-center">
-                    <h2 className="text-[30px] font-bold mb-[12px] text-[var(--secondaryColor)]">
+                    <h2 className="lg:text-[1.875rem] md:text-[1.25rem] font-bold mb-[0.75rem] text-[var(--secondaryColor)]">
                         Tecnologias
                     </h2>
-                    <p className="w-[480px] mb-[54px] text-center">
+                    <p className="w-[30rem] lg:mb-[3.375rem] md:mb-[1.25rem] text-center lg:text-[1rem] md:text-[0.875rem]">
                         Conheça um pouco sobre as tecnologias que já utilizei ao longo da minha jornada como programador.
                     </p>
                     <div className="flex">
@@ -27,7 +27,7 @@ const Stack = () => {
                         <StackList title="Back-end" tags={C.backTags}/>
                         <StackList title="Outros" tags={C.othersTags} last={true}/>
                     </div>
-                    <Link href={"/stack"} className="w-[112px] rounded-[12px] px-[21px] py-[6px] bg-[var(--terdiaryColor)] font-bold text-[var(--secondaryColor)] mt-[56px]" type="button">
+                    <Link href={"/stack"} className=" rounded-[0.75rem] lg:px-[1.3125rem] lg:py-[0.375rem] md:px-[1rem] md:py-[0.25rem] bg-[var(--terdiaryColor)] font-bold text-[var(--secondaryColor)] lg:mt-[3.5rem] md:mt-[0.75rem] lg:text-[1rem] md:text-[0.875rem]" type="button">
                         Ver mais
                     </Link>
                 </div>
