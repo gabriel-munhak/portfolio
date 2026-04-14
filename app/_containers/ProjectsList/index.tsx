@@ -23,8 +23,6 @@ const Projects = () => {
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth
-            console.log("width:", width) 
-
             setIsMobile(width < 1024)
         }
 
@@ -73,11 +71,11 @@ const Projects = () => {
                 <div className="w-full">
 
                     <motion.div variants={itemAnimation}>
-                        <h2 className="lg:text-[1.875rem] md:text-[1.25rem] font-bold mb-[1rem]">Projetos e atividades</h2>
+                        <h2 className="lg:text-[1.875rem] md:text-[1.25rem] font-bold lg:mb-[1rem] md:mb-[.8rem]">Projetos e atividades</h2>
                     </motion.div>
 
                     <motion.div variants={itemAnimation}>
-                        <div className="flex justify-between mb-[1.375rem]">
+                        <div className="flex justify-between lg:mb-[1.375rem] md:mb-[1rem]">
                             <div className="flex font-semibold">
                                 <button onClick={() => setFilter("All")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] md:py-[0.375rem] md:px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] md:rounded-[0.625rem] mr-[1rem] lg:text-[1rem] md:text-[0.875rem] ${filter === "All"? "active" : ""}`}>Todos</button>
                                 <button onClick={() => setFilter("Projects")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] md:py-[0.375rem] md:px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] md:rounded-[0.625rem] mr-[1rem] lg:text-[1rem] md:text-[0.875rem] ${filter === "Projects"? "active" : ""}`}>Projetos</button>
@@ -88,7 +86,7 @@ const Projects = () => {
                         </div>
                     </motion.div>
 
-                    <div className="grid grid-cols-3 grid-rows-1 lg:gap-[1.375rem] md:gap-[1rem]">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 lg:gap-[1.375rem] md:gap-[1rem]">
                         {resolvedProjects.map((r, index) => (
                         <motion.div variants={itemAnimation} key={index} >
                             <ProjectCard name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url}  />

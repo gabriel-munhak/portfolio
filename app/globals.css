@@ -18,6 +18,10 @@ body {
   color: var(--primaryTextColor);
 }
 
+section {
+  width: 100vw;
+}
+
 .container {
   width: 100%;
   height: 100vh;
@@ -33,6 +37,12 @@ body {
 
 button, a {
   cursor: pointer
+}
+
+@media (min-width: 1023px) {
+  section {
+    height: 100vh;
+  }
 }
 
 @layer utilities {
