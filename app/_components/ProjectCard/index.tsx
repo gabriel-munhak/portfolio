@@ -1,7 +1,8 @@
 import Image from "next/image"
 import placeholder from "@/public/assets/placeholder.png"
+import Button from "../Button"
 
-const ProjectCard = ({name, projectLink, projectRepo, newProject}: ProjectCard) => {
+const ProjectCard = ({ name, projectLink, projectRepo, newProject }: ProjectCard) => {
     return (
         <div>
             <div className="relative">
@@ -12,9 +13,25 @@ const ProjectCard = ({name, projectLink, projectRepo, newProject}: ProjectCard) 
                 )}
             </div>
             <h2 className="lg:text-[18px] md:text-[16px] font-black my-[12px]">{name}</h2>
-            <div>
-                <a href={projectLink} target="_blank" className="lg:py-[8px] lg:px-[22px] lg:text-[14px] py-[6px] px-[14px] text-[14px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] font-black lg:mr-[12px] mr-[8px] active:bg-[var(--secondaryColor)] active:text-[var(--secondaryTextColor)] active:font-black">Ver projeto</a>
-                <a href={projectRepo} target="_blank" className="lg:py-[8px] lg:px-[22px] lg:text-[14px] py-[6px] px-[14px] text-[14px] bg-[var(--btnBgPrimaryColor)] rounded-[12px] font-black active:bg-[var(--secondaryColor)] active:text-[var(--secondaryTextColor)] active:font-black">Ver repositório</a>
+            <div className="flex gap-[8px] lg:gap-[12px]">
+                <Button
+                    as="a"
+                    href={projectLink}
+                    target="_blank"
+                    variant="secondary"
+                    size="md"
+                >
+                    Ver projeto
+                </Button>
+                <Button
+                    as="a"
+                    href={projectRepo}
+                    target="_blank"
+                    variant="secondary"
+                    size="md"
+                >
+                    Ver repositório
+                </Button>
             </div>
         </div>
     )

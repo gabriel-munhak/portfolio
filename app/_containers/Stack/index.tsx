@@ -5,6 +5,7 @@ import { containerAnimation, itemAnimation } from "@/app/_consts/motion";
 import StackList from "@/app/_components/StackList"
 import * as C from "@/app/_consts/tags"
 import Link from "next/link";
+import Button from "@/app/_components/Button";
 
 const Stack = () => {
     return (
@@ -27,8 +28,10 @@ const Stack = () => {
                         <StackList title="Back-end" tags={C.backTags}/>
                         <StackList title="Outros" tags={C.othersTags} last={true}/>
                     </div>
-                    <Link href={"/stack"} className="rounded-[0.75rem] lg:px-[1.3125rem] lg:py-[0.375rem] px-[1rem] py-[0.25rem] bg-[var(--terdiaryColor)] font-bold text-[var(--secondaryColor)] lg:mt-[3.5rem] md:mt-[0.75rem] mt-[2rem] lg:text-[1rem] text-[0.875rem]" type="button">
-                        Ver mais
+                    <Link href="/stack">
+                        <Button variant="tertiary" size="tag">
+                            Ver mais
+                        </Button>
                     </Link>
                 </div>
             </motion.div>

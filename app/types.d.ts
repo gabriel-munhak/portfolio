@@ -19,3 +19,13 @@ type Repo = {
     homepage: string;
     newProject: boolean
 }
+
+type ButtonProps = {
+    as?: "button" | "a"
+    href?: string
+    variant?: "primary" | "secondary" | "tertiary" | "quaternary"
+    size?: "hero" | "md" | "sm" | "tag"
+    className?: string
+    children: React.ReactNode
+} & React.ButtonHTMLAttributes<HTMLButtonElement> &
+    React.AnchorHTMLAttributes<HTMLAnchorElement>

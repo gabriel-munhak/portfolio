@@ -1,3 +1,4 @@
+import Button from "../Button"
 import ContactIconsList from "../ContactIconsList"
 
 const Hero = () => {
@@ -14,9 +15,9 @@ const Hero = () => {
                         e profissionais, além dos projetos e atividades mais recentes.
                     </p>
                     <div className="lg:block flex items-center justify-between">
-                        <a href="#about-me" className="inline-block px-[2.375rem] lg:px-[3.5rem] py-[0.875rem] lg:py-[1.25rem] rounded-[1.25rem] lg:rounded-[2.5rem] bg-[var(--secondaryColor)] text-[var(--secondaryTextColor)] text-[0.875rem] lg:text-[1.375rem] font-black">
-                        Sobre mim
-                        </a>
+                        <Button as="a" href="#about-me" size="hero">
+                            Sobre mim
+                        </Button>
                         <div className="lg:mt-[5.625rem]">
                             <ContactIconsList />
                         </div>
