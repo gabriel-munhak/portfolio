@@ -61,32 +61,32 @@ const Projects = () => {
     const resolvedProjects = isMobile ? mobileProjects : desktopProjects
 
     return (
-        <motion.section id="project-list" className="snap-start"
+        <motion.section id="project-list" className="snap-start container container--desktop md:flex items-center justify-center"
             variants={containerAnimation}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
         >
-            <div className="container text-[var(--secondaryColor)] flex flex-col items-center justify-center">
+            <div className="text-[var(--secondaryColor)] flex flex-col items-center justify-center">
                 <div className="w-full">
 
                     <motion.div variants={itemAnimation}>
-                        <h2 className="lg:text-[1.875rem] md:text-[1.25rem] font-bold lg:mb-[1rem] md:mb-[.8rem]">Projetos e atividades</h2>
+                        <h2 className="lg:text-[1.875rem] text-[1.25rem] font-bold lg:mb-[1rem] mb-[.8rem]">Projetos e atividades</h2>
                     </motion.div>
 
                     <motion.div variants={itemAnimation}>
-                        <div className="flex justify-between lg:mb-[1.375rem] md:mb-[1rem]">
+                        <div className="flex justify-between lg:mb-[1.375rem] mb-[1rem]">
                             <div className="flex font-semibold">
-                                <button onClick={() => setFilter("All")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] md:py-[0.375rem] md:px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] md:rounded-[0.625rem] mr-[1rem] lg:text-[1rem] md:text-[0.875rem] ${filter === "All"? "active" : ""}`}>Todos</button>
-                                <button onClick={() => setFilter("Projects")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] md:py-[0.375rem] md:px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] md:rounded-[0.625rem] mr-[1rem] lg:text-[1rem] md:text-[0.875rem] ${filter === "Projects"? "active" : ""}`}>Projetos</button>
-                                <button onClick={() => setFilter("Activities")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] md:py-[0.375rem] md:px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] md:rounded-[0.625rem] lg:text-[1rem] md:text-[0.875rem] ${filter === "Activities"? "active" : ""}`}>Atividades</button>
+                                <button onClick={() => setFilter("All")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] py-[0.375rem] px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] rounded-[0.625rem] mr-[.5rem] md:mr-[1rem] lg:text-[1rem] text-[0.875rem] ${filter === "All"? "active" : ""}`}>Todos</button>
+                                <button onClick={() => setFilter("Projects")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] py-[0.375rem] px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] rounded-[0.625rem] mr-[.5rem] md:mr-[1rem] lg:text-[1rem] text-[0.875rem] ${filter === "Projects"? "active" : ""}`}>Projetos</button>
+                                <button onClick={() => setFilter("Activities")} type="button" className={`lg:py-[0.5rem] lg:px-[1rem] py-[0.375rem] px-[0.875rem] bg-[var(--btnBgPrimaryColor)] lg:rounded-[0.75rem] rounded-[0.625rem] lg:text-[1rem] text-[0.875rem] ${filter === "Activities"? "active" : ""}`}>Atividades</button>
                             </div>
 
-                            <Link href="/projects" className="font-black lg:text-[1rem] md:text-[0.875rem] self-center">Ver mais</Link>
+                            <Link href="/projects" className="font-black lg:text-[1rem] text-[0.875rem] self-center">Ver mais</Link>
                         </div>
                     </motion.div>
 
-                    <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 lg:gap-[1.375rem] md:gap-[1rem]">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-y-[2rem] gap-x-[1rem] lg:gap-[1.375rem]">
                         {resolvedProjects.map((r, index) => (
                         <motion.div variants={itemAnimation} key={index} >
                             <ProjectCard name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url}  />

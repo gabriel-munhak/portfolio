@@ -9,7 +9,7 @@ const AboutMe = () => {
     return (
         <motion.section
             id="about-me"
-            className="container flex items-center justify-between snap-start"
+            className="container md:container--desktop flex items-center justify-between snap-start"
             variants={containerAnimation}
             initial="hidden"
             whileInView="show"

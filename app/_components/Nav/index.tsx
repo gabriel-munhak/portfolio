@@ -10,9 +10,9 @@ const Nav = () => {
     }
 
     return (
-        <nav className="h-[2rem] flex items-center justify-center w-full lg:mb-[3rem] md:mb-[1.25rem] text-[var(--secondaryColor)]">
+        <nav className="h-[5rem] md:h-[2rem] flex items-center justify-center w-full lg:mb-[3rem] md:mb-[1.25rem] text-[var(--secondaryColor)]">
             <div className="container !h-[auto] flex justify-between md:relative">
-                <span className="md:text-[1.25rem] lg:text-[1.5rem] font-black">
+                <span className="text-[1.25rem] md:text-[1.25rem] lg:text-[1.5rem] font-black">
                     Gabriel Munhak
                 </span>
                 <ul className="hidden lg:flex justify-between items-end w-[32.5rem] text-[1rem]">
@@ -34,8 +34,9 @@ const Nav = () => {
                 </ul>
                 <Image onClick={handleClick} className="block lg:hidden w-[1.5rem] h-[1.5rem]" src={menu} alt="Ícone de expandir o menu" />
                 {showMobileList && (
-                    <div className="absolute w-[100vw] h-[100vh] top-[2.5rem] left-[0] bg-[var(--primaryColor)]">
-                        <ul className="flex flex-col justify-between gap-[1rem] text-[1rem] lg:hidden ">
+                    <div className="absolute w-[100vw] h-[100vh] top-[4rem] md:top-[2.5rem] left-[0] bg-[var(--primaryColor)]">
+                        <div className="container md:!mx-0">
+                            <ul className="flex flex-col justify-between gap-[1rem] text-[1rem] lg:hidden ">
                             <li>
                                 <a onClick={handleClick} href="#home">Home</a>
                             </li>
@@ -52,6 +53,7 @@ const Nav = () => {
                                 <a onClick={handleClick} href="#contact">Contato</a>
                             </li>
                         </ul>
+                        </div>
                     </div>
                 )}
             </div>
