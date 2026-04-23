@@ -56,19 +56,19 @@ const Projects = () => {
             return 0
         })
 
-    const mobileProjects = filteredRepos.slice(0, 3)
+    const mobileProjects = filteredRepos.slice(0, 4)
     const desktopProjects = filteredRepos.slice(0, 6)
 
     const resolvedProjects = isMobile ? mobileProjects : desktopProjects
 
     return (
-        <motion.section id="project-list" className="snap-start container container--desktop md:flex items-center justify-center"
+        <motion.section id="project-list" className="snap-start container md:flex items-center justify-center"
             variants={containerAnimation}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
         >
-            <div className="text-[var(--secondaryColor)] flex flex-col items-center justify-center">
+            <div className="w-full text-[var(--secondaryColor)] flex flex-col items-center justify-center">
                 <div className="w-full">
 
                     <motion.div variants={itemAnimation}>
@@ -103,15 +103,15 @@ const Projects = () => {
                                     Atividades
                                 </Button>
                             </div>
-                            <Link href="/projects">
-                                <Button variant="quaternary" size="tag" className="self-center">
+                            <Link href="/projects" className="flex items-center justify-center">
+                                <Button variant="quaternary" size="tag" className="p-[0]">
                                     Ver mais
                                 </Button>
                             </Link>
                         </div>
                     </motion.div>
 
-                    <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-y-[2rem] gap-x-[1rem] lg:gap-[1.375rem]">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-[2rem] gap-x-[1rem] lg:gap-[1.375rem]">
                         {resolvedProjects.map((r, index) => (
                             <motion.div variants={itemAnimation} key={index} >
                                 <ProjectCard name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url} />

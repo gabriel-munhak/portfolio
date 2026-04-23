@@ -9,14 +9,14 @@ import Button from "@/app/_components/Button";
 
 const Stack = () => {
     return (
-        <motion.section id="stack" className="snap-start"
+        <motion.section id="stack" className="flex flex-col items-center justify-center snap-start container md:container--desktop pb-[104px] lg:pb-[0]"
             variants={containerAnimation}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
         >
             <motion.div variants={itemAnimation}>
-                <div className="container container--desktop flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center">
                     <h2 className="lg:text-[1.875rem] text-[1.25rem] font-bold mb-[0.75rem] text-[var(--secondaryColor)]">
                         Tecnologias
                     </h2>
