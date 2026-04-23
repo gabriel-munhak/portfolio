@@ -1,8 +1,7 @@
-import { newProjects, reposObject } from "../_consts/content"
+import { newProjects, reposObject } from "../_consts/repos"
 
-export const filterRepos = (repos: Repo[], filter: string) => {
-
-    return repos.filter((r) => {
+export const filterRepos = (repos: Repo[], filter: string) => 
+    repos.filter((r) => {
         switch (filter) {
             case "Projects":
                 return reposObject.Projects.includes(r.name)
@@ -23,4 +22,3 @@ export const filterRepos = (repos: Repo[], filter: string) => {
         if (!aIsNew && bIsNew) return 1
         return 0
     })
-}

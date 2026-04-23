@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { newProjects } from "../_consts/content"
+import { newProjects } from "../_consts/repos"
 import { containerAnimation, itemAnimation } from "../_consts/motion"
 import { motion } from "framer-motion"
 import Button from "../_components/Button"
@@ -68,7 +68,7 @@ const Projects = () => {
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-[2rem] gap-x-[1rem] lg:gap-[1.375rem]">
                         {filteredRepos.map((r, index) => (
                             <motion.div variants={itemAnimation} key={index} >
-                                <ProjectCard image={r.image} name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url} />
+                                <ProjectCard image={r.image} name={r.name} newProject={newProjects.includes(r.name)} projectLink={r.html_url} projectRepo={r.svn_url} />
                             </motion.div>
                         ))}
                     </div>

@@ -8,7 +8,7 @@ type StackList = {
 type ProjectCard = {
     image: string,
     name: string,
-    projectLink: string,
+    projectLink: string | null,
     projectRepo: string
     newProject: boolean
 }
@@ -18,7 +18,7 @@ type Repo = {
     name: string;
     image?: string;
     html_url: string;
-    homepage: string;
+    svn_url: string;
     newProject: boolean
 }
 

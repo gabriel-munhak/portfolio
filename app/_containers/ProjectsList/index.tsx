@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion";
 import { containerAnimation, itemAnimation } from "@/app/_consts/motion";
 import ProjectCard from "@/app/_components/ProjectCard"
-import { newProjects } from "@/app/_consts/content"
+import { newProjects } from "@/app/_consts/repos"
 import Link from "next/link";
 import Button from "@/app/_components/Button"; 
 import { useRepos } from "@/app/hooks/useRepos";
@@ -68,7 +68,7 @@ const ProjectsList = () => {
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-[2rem] gap-x-[1rem] lg:gap-[1.375rem]">
                         {filteredRepos.map((r, index) => (
                             <motion.div variants={itemAnimation} key={index} >
-                                <ProjectCard image={r.image} name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url} />
+                                <ProjectCard image={r.image} name={r.name} newProject={newProjects.includes(r.name)} projectLink={r.html_url} projectRepo={r.svn_url} />
                             </motion.div>
                         ))}
                     </div>
