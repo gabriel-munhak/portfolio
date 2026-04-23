@@ -6,6 +6,7 @@ type StackList = {
 }
 
 type ProjectCard = {
+    image: string,
     name: string,
     projectLink: string,
     projectRepo: string
@@ -15,6 +16,7 @@ type ProjectCard = {
 type Repo = {
     id: number;
     name: string;
+    image?: string;
     html_url: string;
     homepage: string;
     newProject: boolean

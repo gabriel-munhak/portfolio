@@ -1,13 +1,14 @@
 import Image from "next/image"
-import placeholder from "@/public/assets/placeholder.png"
 import Button from "../Button"
 
-const ProjectCard = ({ name, projectLink, projectRepo, newProject }: ProjectCard) => {
+const ProjectCard = ({ image, name, projectLink, projectRepo, newProject }: ProjectCard) => {
     return (
         <div>
             <div className="relative">
                 <div className="absolute top-0 left-0 w-full h-full bg-[var(--overlayColor)] rounded-[20px]"></div>
-                <Image className="w-full h-full" src={placeholder} alt={`Imagem do projeto ${name}`} />
+                    <div className="w-full aspect-[16/9]">
+                        <Image className="w-full h-full rounded-[20px] object-cover" width={1024} height={1024} src={image} alt={`Imagem do projeto ${name}`} />
+                    </div>
                 {newProject && (
                     <span className="absolute lg:text-[16px] text-[14px] top-0 left-0 lg:mx-[21px] lg:my-[21px] mx-[16px] my-[16px] lg:px-[11px] lg:py-[7px] px-[10px] py-[6px] rounded-[4px] [background:var(--gradientPrimaryColor)] text-[var(--secondaryTextColor)]">Novo</span>
                 )}

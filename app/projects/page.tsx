@@ -9,10 +9,11 @@ import Link from "next/link"
 import ProjectCard from "../_components/ProjectCard"
 import { useRepos } from "../hooks/useRepos"
 import { filterRepos } from "../utils/filterRepos"
+import { reposMap } from "../utils/reposMap"
 
 const Projects = () => {
     const [filter, setFilter] = useState<Filter>("All")
-    const filteredRepos = filterRepos(useRepos(), filter)
+    const filteredRepos = reposMap(filterRepos(useRepos(), filter))
     
     return (
         <motion.div id="project-list" className="container md:flex items-center justify-center pt-[60px]"
@@ -67,7 +68,7 @@ const Projects = () => {
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-[2rem] gap-x-[1rem] lg:gap-[1.375rem]">
                         {filteredRepos.map((r, index) => (
                             <motion.div variants={itemAnimation} key={index} >
-                                <ProjectCard name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url} />
+                                <ProjectCard image={r.image} name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url} />
                             </motion.div>
                         ))}
                     </div>

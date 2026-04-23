@@ -9,15 +9,16 @@ import Link from "next/link";
 import Button from "@/app/_components/Button"; 
 import { useRepos } from "@/app/hooks/useRepos";
 import { filterRepos } from "@/app/utils/filterRepos";
+import { reposMap } from "@/app/utils/reposMap";
 
 const ProjectsList = () => {
     const [filter, setFilter] = useState<Filter>("All")
-    const filteredRepos = filterRepos(useRepos(), filter)
+    const filteredRepos = reposMap(filterRepos(useRepos(), filter)).slice(0, 6)
 
     return (
         <motion.section id="project-list" className="snap-start container md:flex items-center justify-center"
             variants={containerAnimation}
-            initial="hidden"
+            initial="hidden"    
             whileInView="show"
             viewport={{ once: true, amount: 0.4 }}
         >
@@ -67,7 +68,7 @@ const ProjectsList = () => {
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-[2rem] gap-x-[1rem] lg:gap-[1.375rem]">
                         {filteredRepos.map((r, index) => (
                             <motion.div variants={itemAnimation} key={index} >
-                                <ProjectCard name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url} />
+                                <ProjectCard image={r.image} name={r.name} newProject={newProjects.includes(r.name)} projectLink="" projectRepo={r.html_url} />
                             </motion.div>
                         ))}
                     </div>
