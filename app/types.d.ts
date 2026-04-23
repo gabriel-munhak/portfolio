@@ -29,3 +29,5 @@ type ButtonProps = {
     children: React.ReactNode
 } & React.ButtonHTMLAttributes<HTMLButtonElement> &
     React.AnchorHTMLAttributes<HTMLAnchorElement>
+
+type Filter = "All" | "Projects" | "Activities"

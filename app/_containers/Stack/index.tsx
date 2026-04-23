@@ -28,11 +28,6 @@ const Stack = () => {
                         <StackList title="Back-end" tags={C.backTags}/>
                         <StackList title="Outros" tags={C.othersTags} last={true}/>
                     </div>
-                    <Link href="/stack">
-                        <Button variant="tertiary" size="tag">
-                            Ver mais
-                        </Button>
-                    </Link>
                 </div>
             </motion.div>
         </motion.section>
