@@ -3,7 +3,7 @@ export const reposObject = {
     Activities: ["modulogit", "exercicio_es6", "ebac_games_redux", "cypress", "base_exercicio_css_in_js", "async"]
 }
 
-export const newProjects = ["efood", "eplay", "cypress"]
+export const newProjects = ["EFood", "EPlay", "Cypress"]
 
 export const nameMap: Record<string, string> = {
     efood: "EFood",

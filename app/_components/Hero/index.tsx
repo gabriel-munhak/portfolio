@@ -24,7 +24,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-[278px] w-[282px]  lg:w-[32.5rem] lg:h-[34.5rem] grid grid-cols-2 gap-[0.375rem] lg:gap-[0.5625rem] text-[var(--secondaryColor)] mb-[2rem] md:mb-[0]">
+            <div className="h-[278px] w-[282px] lg:w-[32.5rem] lg:h-[31.5rem] grid grid-cols-2 gap-[0.375rem] lg:gap-[0.5625rem] text-[var(--secondaryColor)] mb-[2rem] md:mb-[0]">
                 <div className="lg:rounded-[1rem] rounded-[.7rem] bg-[var(--terdiaryColor)] lg:pt-[2rem] lg:pl-[1.6875rem] pt-[0.75rem] pl-[1.125rem]">
                     <span className="lg:text-[2.5rem] text-[2rem] font-bold">+25</span>
                     <p className="lg:text-[1.5rem] text-[1rem] font-semi-bold w-[11rem] lg:leading-[1.75rem] leading-[1.1875rem]">

@@ -13,7 +13,7 @@ import { reposMap } from "@/app/utils/reposMap";
 
 const ProjectsList = () => {
     const [filter, setFilter] = useState<Filter>("All")
-    const filteredRepos = reposMap(filterRepos(useRepos(), filter)).slice(0, 6)
+    const filteredRepos = reposMap(filterRepos(useRepos(), filter)).slice(0, 3)
 
     return (
         <motion.section id="project-list" className="snap-start container md:flex items-center justify-center"
