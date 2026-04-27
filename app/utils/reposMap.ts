@@ -1,12 +1,10 @@
-import { htmlUrlMap, nameMap, newProjects, reposObject } from "../_consts/repos"
+import { htmlUrlMap, nameMap, newProjects} from "../_consts/repos"
 
 export const reposMap = (repos: Repo[]) => 
     repos.map(repo => ({
         ...repo,
         name: nameMap[repo.name] || repo.name,
-        image: reposObject.Projects.includes(repo.name)
-        ? `/projects/${repo.name}.png`
-        : '/projects/placeholder.png',
+        image: `/projects/${repo.name}.png`,
         html_url: htmlUrlMap[repo.name],
 })).sort((a, b) => {
     const aIsNew = newProjects.includes(a.name)

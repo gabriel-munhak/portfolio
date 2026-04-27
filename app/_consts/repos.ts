@@ -14,12 +14,12 @@ export const nameMap: Record<string, string> = {
     email: "Email",
     "recent-activity": "Recent Activity",
     loja_doces: "Loja de Doces",
-    modulogit: "Módulo Git",
+    modulogit: "GitHub Merge Conflicts",
     exercicio_es6: "Exercício ES6",
-    ebac_games_redux: "EBAC Games Redux",
+    ebac_games_redux: "Redux",
     cypress: "Cypress",
     base_exercicio_css_in_js: "CSS-in-JS",
-    async: "Async"
+    async: "ES6+"
 }
 
 export const htmlUrlMap: Record<string, string | null> = {
