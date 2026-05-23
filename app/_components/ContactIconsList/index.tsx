@@ -16,7 +16,7 @@ const ContactIconsList = () => {
             <a href="https://wa.me/55119971588621" target="_blank">
                 <Image src={phone} alt="Me mande uma mensagem via Whatsapp"/>
             </a>
-            <a href="mailto: gabrielmunhak1334@hotmail.com" target="_blank">
+            <a href="mailto: gabrielmunhak.dev@gmail.com" target="_blank">
                 <Image src={mail} alt="Me envie um e-mail" />
             </a>
         </div>
